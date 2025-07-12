@@ -1,0 +1,410 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto 100px;
+  gap: 10px;
+  border: 2px solid #000;
+  background-image: url(Img.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+header{
+  grid-column: 1/-1;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(241, 233, 233, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(241, 233, 233, 0.34);
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  
+}
+.navbar a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin-left: 60px;
+}
+.navbar a:hover{
+  color: #fff;
+  background-color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.logo h1{
+  font-size: 2rem;
+  color: #000;
+  margin-left: 20px;
+}
+main{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+#home{
+  grid-column: 1/-1;
+}
+#home h1{
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  margin-top: 20px;
+}
+#home p{
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 10px;
+}
+#products{
+  grid-column: 1/-1;
+  padding: 20px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+#products h2{
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+#text{
+  text-align: center;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 20px;
+  padding: 0 150px;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card1,.card2,.card3,.card4{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  max-height: auto;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+.card1:hover,.card2:hover,.card3:hover,.card4:hover{
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  rotate: -3deg;
+}
+.card1 h1,.card2 h1,.card3 h1,.card4 h1{
+  font-size: 1.5rem;
+  color: #000;
+}
+.card1 p,.card2 p,.card3 p,.card4 p{
+  font-size: .8rem;
+  color: #000;
+  padding: 10px;
+}
+.card1 p.price,.card2 p.price,.card3 p.price,.card4 p.price{
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 5px;
+}
+.card1 button,.card2 button,.card3 button,.card4 button{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.card1 button:hover,.card2 button:hover,.card3 button:hover,.card4 button:hover{
+  background-color: yellow;
+  color: black;
+}
+.card1 img,.card2 img,.card3 img,.card4 img{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s;
+}
+#about{
+  grid-column: 1/-1;
+  padding: 20px;
+  text-align: center;
+}
+#about h2{
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+#about p{
+  font-size: 1rem;
+  color: #000;
+  padding: 0 150px;
+}
+#Contact{
+  grid-column: 1/-1;
+  padding: 20px;
+  text-align: center;
+  background-color: #00000037;
+  border-radius: 10px;;
+  margin-top: 20px;
+}
+#Contact .text{
+  margin-bottom: 10px;
+}
+#Contact .text h2{
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+#Contact .text p{
+  font-size: 1rem;
+  color: #000;
+}
+#Contact .text p a{
+  color: #000;
+  text-decoration: none;
+}
+#Contact .text p a:hover{
+  color: yellow;
+  text-decoration: underline;
+}
+
+#Contact .form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Contact .form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Contact .form label{
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1px;
+}
+#Contact .form input[type="tel"]{
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#Contact .form input[type="submit"]{
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#Contact .form input[type="submit"]:hover{
+  background-color: yellow;
+  color: black;
+}
+#Contact .form small{
+  font-size: 0.8rem;
+  color: #000;
+  margin-top: 5px;
+}
+#Contact .form textarea{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+footer{
+  grid-column: 1/-1;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+}
+@media (max-width:600px) {
+  .navbar{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .navbar ul{
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar a{
+    margin: 10px 0;
+    font-size: smaller;
+  }
+  main{
+    flex-wrap: wrap;
+  }
+  #home h1{
+    font-size: 2rem;
+  }
+  #home p{
+    font-size: 1rem;
+  }
+  #about{
+    padding: 10px;
+  }
+  #about h2{
+    font-size: 1.5rem;
+  }
+  #about p{
+    width: 100%;
+    padding: 0 20px;
+
+  }
+  #products h2{
+    font-size: 1.5rem;
+  }
+  #products p{
+    width: 100%;
+    padding: 0;
+  }
+  #products .column{
+    width: 100%;
+    padding: 0;
+  }
+  .card1, .card2, .card3, .card4{
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    max-width: none;
+  }
+  .card1 img, .card2 img, .card3 img, .card4 img{
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  .card1 h1, .card2 h1, .card3 h1, .card4 h1{
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  .card1 p, .card2 p, .card3 p, .card4 p{
+    font-size: 0.9rem;
+    padding: 15px;
+
+  }
+  .card1 p.price, .card2 p.price, .card3 p.price, .card4 p.price{
+    font-size: 1rem;
+  }
+  .card1 button, .card2 button, .card3 button, .card4 button{
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  #contact{
+    width:100%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #home h1{
+    font-size: 2rem;
+  }
+  #home p{
+    font-size: 1rem;
+  }
+  #about{
+    padding: 10px;
+  }
+  #about h2{
+    font-size: 1.5rem;
+  }
+  #about p{
+    width: 100%;
+    padding: 0 20px;
+
+  }
+  #products h2{
+    font-size: 1.5rem;
+  }
+  #products p{
+    width: 100%;
+    padding: 0;
+  }
+  #products .column{
+    width: 100%;
+    padding: 0;
+  }
+  .card1, .card2, .card3, .card4{
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    max-width: none;
+  }
+  .card1 img, .card2 img, .card3 img, .card4 img{
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  .card1 h1, .card2 h1, .card3 h1, .card4 h1{
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  .card1 p, .card2 p, .card3 p, .card4 p{
+    font-size: 0.9rem;
+    padding: 15px;
+
+  }
+  .card1 p.price, .card2 p.price, .card3 p.price, .card4 p.price{
+    font-size: 1rem;
+  }
+  .card1 button, .card2 button, .card3 button, .card4 button{
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  #contact{
+    width:100%;
+  }
+}
