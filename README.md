@@ -1,1 +1,2 @@
 # Online_Store
+I created an online store website, for the structure of this store i used html where i created the navigation bar also i added some products to the store and a contact me section to make this online store user-friendly i used CSS to change the style of the web site and i used css grid to make it responsive. 
