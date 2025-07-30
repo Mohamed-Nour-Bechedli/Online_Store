@@ -1,141 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Navigation for better accessibility -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h1>Online Store</h1>
-            </div>
-            <!-- Navigation links -->
-            <div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Développeur web passionné, je crée des expériences numériques uniques.</p>
+            <a href="#contact" class="btn">Me contacter</a>
+        </div>
     </header>
 
     <main>
-        <!-- the home section -->
-        <section id="home">
-
-            <div>
-                <h1>Welcome to Our Online Store</h1>
-                <p>
-                    Welcome to our online store! We offer a wide range of products to meet your needs.<br /> Browse
-                    through our categories and find what you're looking for.
-                </p>
-            </div>
-        <!-- about section -->
-        </section>
-                <section id="about">
-            <div>
-                <h2>About Us</h2>
-                <p>
-                    We are a leading online retailer with a commitment to quality and customer satisfaction.<br /> Our
-                    team works hard to bring you the best products at competitive prices.
-                </p>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>À Propos de Moi</h2>
+                <p>Je suis un développeur web avec une passion pour la création de sites web performants et esthétiques. Mon expertise inclut HTML, CSS et JavaScript, et je suis toujours désireux d'apprendre de nouvelles technologies.</p>
             </div>
         </section>
 
-
-        <!-- Product section -->
-        <section id="products">
-            <h2>Our Products</h2>
-            <p id="text">Elevate your wardrobe with our premium collection of stylish and comfortable clothing. Designed
-                for quality and versatility, each piece is crafted from high-quality fabrics to ensure a perfect fit and
-                lasting durability. Whether you're dressing up for a special occasion or keeping it casual, our range
-                offers something for every style and season. Shop now and refresh your look with effortless elegance!
-            </p>
-            <div class="row">
-                <div class="column">
-                    <div class="card1">
-                        <img src="shoes.webp" alt="Sneaker Shoes">
-                        <h1>Sneaker Shoes</h1>
-                        <p class="price">120 DT</p>
-                        <p>Upgrade your footwear game with these trendy sneakers, designed for both fashion and comfort.</p>
-                        <p><button>Shop now</button></p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card2">
-                        <img src="Truewerk.webp" alt="Truewerk Pants">
-                        <h1>Truewerk Pants</h1>
-                        <p class="price">100 DT</p>
-                        <p>Engineered for hardworking professionals, Truewerk pants deliver durability, flexibility, and all-day comfort on the job.</p>
-                        <p><button>Shop now</button></p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card3">
-                        <img src="T shirt.webp" alt="T-Shirts">
-                        <h1>T-Shirts</h1>
-                        <p class="price">50DT</p>
-                        <p>The ultimate wardrobe staple, this premium black T-shirt combines softness, durability, and effortless style.</p>
-                        <p><button>Shop now</button></p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card4">
-                        <img src="hat.avif" alt="Hat">
-                        <h1>Hat</h1>
-                        <p class="price">80DT</p>
-                        <p>Top off your look with our signature hat, designed for comfort, durability, and effortless cool.</p>
-                        <p><button>Shop now</button></p>
-                    </div>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Projet 1</h3>
+                        <p>Description courte du projet 1.</p>
+                        <a href="#" class="btn-small" aria-label="Voir le détail du projet 1">Voir le projet</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Projet 2</h3>
+                        <p>Description courte du projet 2.</p>
+                        <a href="#" class="btn-small" aria-label="Voir le détail du projet 2">Voir le projet</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Projet 3</h3>
+                        <p>Description courte du projet 3.</p>
+                        <a href="#" class="btn-small" aria-label="Voir le détail du projet 3">Voir le projet</a>
+                    </article>
                 </div>
             </div>
-
-        <!-- Contact Section -->
         </section>
 
-        <section id="Contact">
-            <div class="text">
-                <h2>Contact Us</h2>
-                <p>
-                    If you have any questions or need assistance, feel free to reach out to us.<br /> You can
-                    contact us via email at
-                </p>
-                <p>Email: <a href="mailto:">mohamed-nour.bechdli@enis.tn</a></p>
-            </div>
-            <div class="form">
-                <form action="/action_page.php">
-                    <label for="phone">Enter a phone number:</label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone here"
-                        pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}">
-                    <small>Format: 21-123-345</small><br>
-                    <label for="message">Message:</label><br />
-                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br /><br />
-                    <input type="submit">
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Me Contacter</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span id="name-error" class="error-message" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span id="email-error" class="error-message" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-message" role="alert"></span>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
                 </form>
             </div>
         </section>
-
     </main>
 
-
-</body>
     <footer>
-
-        <div class="footer">
-            <p>&copy; 2025 Online Store. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
         </div>
-
     </footer>
-
+</body>
 </html>
