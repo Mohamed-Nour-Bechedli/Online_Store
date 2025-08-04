@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Card</title>
+    <style>
+        /* Reset default margins and set base font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Main pricing card container */
+        .pricing {
+            width: 300px;
+            max-width: 100%; /* Responsive design */
+            margin: auto;
+            background-color: #fff;
+            /* FIXED: Changed 'box-shdow' to 'box-shadow' */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px; /* Increased padding for better spacing */
+            text-align: center; /* IMPROVED: Center align for better visual hierarchy */
+            border-radius: 10px; /* Added rounded corners for modern look */
+            transition: transform 0.3s ease; /* Added hover animation */
+        }
+
+        /* Hover effect for the entire card */
+        .pricing:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Title styling with improved typography */
+        .title {
+            font-size: 24px; /* Slightly larger for better hierarchy */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px; /* Added spacing below title */
+        }
+
+        /* Price styling with enhanced visual appeal */
+        .price {
+            font-size: 32px; /* Larger for emphasis */
+            font-weight: bold;
+            color: #2ecc71; /* Better green shade */
+            margin-bottom: 20px; /* Added spacing below price */
+        }
+
+        /* Features list styling */
+        .features {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px; /* Added spacing below features */
+            text-align: left; /* Left align list items for readability */
+        }
+
+        /* Individual feature item styling */
+        .features li {
+            padding: 12px 0; /* Increased vertical padding */
+            border-bottom: 1px solid #eee;
+            color: #666;
+            position: relative;
+            padding-left: 20px; /* Space for checkmark */
+        }
+
+        /* Added checkmark icons for features */
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        /* Remove border from last feature item */
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Button styling with improved design */
+        .btn {
+            background: #3498db; /* Better blue shade */
+            color: white;
+            padding: 15px 30px; /* Increased padding for better click target */
+            border: none;
+            margin-top: 10px;
+            border-radius: 25px; /* Rounded button */
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer; /* Added cursor pointer */
+            transition: all 0.3s ease; /* Smooth transition */
+            width: 100%; /* Full width button */
+        }
+
+        /* Enhanced hover effect for button */
+        .btn:hover {
+            background: #2980b9; /* Darker blue on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Active state for button */
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .pricing {
+                width: 280px;
+                padding: 25px 15px;
+            }
+            
+            .title {
+                font-size: 22px;
+            }
+            
+            .price {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main pricing card component -->
+    <div class="pricing">
+        <!-- FIXED: Corrected closing tag from <h2> to </h2> -->
+        <h2 class="title">Basic Plan</h2>
+        
+        <!-- Price display with clear monthly indication -->
+        <p class="price">$9.99<span style="font-size: 16px; color: #666;"> /month</span></p>
+
+        <!-- Features list with improved structure -->
+        <ul class="features">
+            <li>1 GB Storage</li>
+            <li>Basic Support</li>
+            <li>All Core Features</li>
+        </ul>
+
+        <!-- Call-to-action button -->
+        <button class="btn">Start Trial</button>
+    </div>
+</body>
+
+</html>
