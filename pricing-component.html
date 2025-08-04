@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Pricing Component</title>
+    <link rel="stylesheet" href="pricing-component.css">
+</head>
+
+<body>
+    <!-- Container for multiple pricing cards -->
+    <div class="pricing-container">
+        <h1 class="main-title">Choose Your Plan</h1>
+        
+        <!-- Pricing cards will be dynamically inserted here -->
+        <div id="pricing-cards" class="pricing-grid"></div>
+    </div>
+
+    <!-- Pricing Card Template (hidden, used for cloning) -->
+    <template id="pricing-card-template">
+        <div class="pricing-card" data-plan="">
+            <div class="card-header">
+                <h2 class="plan-title"></h2>
+                <div class="plan-badge"></div>
+            </div>
+            
+            <div class="price-section">
+                <span class="currency">$</span>
+                <span class="price-amount"></span>
+                <span class="price-period"></span>
+            </div>
+
+            <ul class="features-list"></ul>
+
+            <button class="cta-button">
+                <span class="button-text"></span>
+                <span class="button-icon">→</span>
+            </button>
+        </div>
+    </template>
+
+    <script src="pricing-component.js"></script>
+    <script>
+        // Example usage of the PricingComponent
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuration data for different pricing plans
+            const pricingPlans = [
+                {
+                    id: 'basic',
+                    title: 'Basic Plan',
+                    price: 9.99,
+                    period: '/month',
+                    badge: '',
+                    features: [
+                        '1 GB Storage',
+                        'Basic Support',
+                        'All Core Features',
+                        'Email Integration'
+                    ],
+                    buttonText: 'Start Trial',
+                    highlighted: false
+                },
+                {
+                    id: 'pro',
+                    title: 'Pro Plan',
+                    price: 19.99,
+                    period: '/month',
+                    badge: 'Most Popular',
+                    features: [
+                        '10 GB Storage',
+                        'Priority Support',
+                        'All Core Features',
+                        'Email Integration',
+                        'Advanced Analytics',
+                        'Custom Integrations'
+                    ],
+                    buttonText: 'Get Started',
+                    highlighted: true
+                },
+                {
+                    id: 'enterprise',
+                    title: 'Enterprise',
+                    price: 49.99,
+                    period: '/month',
+                    badge: 'Best Value',
+                    features: [
+                        'Unlimited Storage',
+                        '24/7 Premium Support',
+                        'All Core Features',
+                        'Email Integration',
+                        'Advanced Analytics',
+                        'Custom Integrations',
+                        'White-label Solution',
+                        'Dedicated Account Manager'
+                    ],
+                    buttonText: 'Contact Sales',
+                    highlighted: false
+                }
+            ];
+
+            // Initialize the pricing component
+            const pricingComponent = new PricingComponent('pricing-cards');
+            
+            // Render all pricing plans
+            pricingComponent.renderPlans(pricingPlans);
+
+            // Add event listeners for button clicks
+            pricingComponent.onPlanSelect((planId, planData) => {
+                console.log(`Selected plan: ${planId}`, planData);
+                alert(`You selected the ${planData.title}!`);
+            });
+        });
+    </script>
+</body>
+
+</html>
